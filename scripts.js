@@ -27,9 +27,9 @@ function handlePrevious() {
 function bgDark() {
     body.style.background = '#232323'
     body.style.color = '#FFF'
-    logo.setAttribute('src', 'img/Vector (1).svg')
+    logo.setAttribute('src', 'img/logo1.svg')
     cart.setAttribute('src', 'img/cart-light.svg')
-    subtitle[0].innerHTML = 'O CONSOLE DA PRÓXIMA<br> GERAÇÃO MAIS PODEROSO'
+    subtitle[0].innerHTML = 'O CONSOLE DA SUA<br> GERAÇÃO MAIS PODEROSO'
     previousEl.forEach(item => item.style.background = '#363636')
     console.log('Previous Clicado')
 }
@@ -43,8 +43,8 @@ function handleNext() {
 function bgLight() {
     body.style.background = "#fff"
     body.style.color = '#232323'
-    subtitle[1].innerHTML = 'O MENOR CONSOLE <br>DA PRÓXIMA GERAÇÃO'
-    logo.setAttribute('src', 'img/Vector (2).svg')
+    subtitle[1].innerHTML = 'O MENOR CONSOLE <br>DA SUA GERAÇÃO'
+    logo.setAttribute('src', 'img/logo2.svg')
     cart.setAttribute('src', 'img/cart-dark.svg')
     previousEl.forEach(item => item.style.color = '#fff')
 }
@@ -54,7 +54,7 @@ function handleSliderClick() {
     clearInterval(interval)
     timeout = setTimeout(() => {
         autoScroll()
-    }, 8000);
+    }, 9000);
 }
 
 function autoScroll() {
@@ -68,5 +68,5 @@ function autoScroll() {
         }
         sliderEl.scrollLeft += sliderWidth
         bgLight()
-    }, 4000);
+    }, 5000);
 }
