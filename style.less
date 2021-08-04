@@ -1,0 +1,261 @@
+
+                                //divs
+
+//cores
+@color-body: #232323;
+@color-font: #fff;
+@color-component: #363636;
+@color-content: #9bf00b;
+@color-button: #097400;
+@color-buttonHover: #097400, #9bf00b;
+//fonts
+@font-text: Arial, Helvetica, 'sans-serif';
+
+//Fonts - size
+@font-title: 4rem;
+@font-subtitle: 2.25rem;
+@font-list: 1.125rem;
+@font-component: 1.5rem;
+
+//widht
+@width-header: 20px;
+
+//FUNCTIONS
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+//Strings
+@tablet: ~"(max-width: 780px)";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: @color-body;
+    color: @color-font;
+    font-family: @font-text;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: all 1.5s;
+}
+
+.container-dark {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    header {
+        margin-top: @width-header;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: @font-list;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        .menu-mobile {
+            display: none
+        }
+        ul {
+            .flex();
+            list-style: none;
+            li {
+                .flex();
+                img {
+                    margin-left: 15px; 
+                }
+            }
+        }
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .details {
+        h1 {
+            font-size: @font-title;
+            font-weight: 700;
+            line-height: 5rem;
+            margin: 0;
+            margin-top: 10px;
+        }
+        & > div {
+            position: relative;
+            background: @color-content;
+            width: 0px;
+            height: 21px;
+            transform: skew(-30deg);
+            margin-left: 10px;
+            margin-bottom: 1.2rem;
+            animation-name: divAnimation;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: ease-in-out;
+        }
+        @keyframes divAnimation {
+            50% {
+                width: 230px;
+            }
+            100% {
+                width: 1px;
+            }
+
+        }
+        h2 {
+            font-size: @font-subtitle;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 1.4375rem;
+        }
+        button {
+            font-size: @font-component;
+            padding: 18px 45px;
+            background: @color-button;
+            border: none;        
+            color: @color-font;
+        }
+    }
+    .deitaled-game {
+        flex-direction: column;
+        align-items: center;
+        .deitaled-components {
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 2vw;
+            .previous {
+                background-color: @color-component;
+            }
+            .next {
+                background-color: @color-font;
+                color: @color-component;
+            }
+            .previous, .next {
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+    }
+
+}
+#container-light {
+    min-width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    header {
+        margin-top: @width-header;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: @font-list;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        
+        ul {
+            .flex();
+            list-style: none;
+            li {
+                .flex();
+                img {
+                    margin-left: 15px; 
+                }
+            }
+        }
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .details {
+        h1 {
+            font-size: @font-title;
+            font-weight: 700;
+            line-height: 5rem;
+            margin: 0;
+            margin-top: 10px;
+        }
+        & > div {
+            background: @color-content;
+            width: 86px;
+            height: 21px;
+            transform: skew(-30deg);
+            margin-left: 10px;
+            margin-bottom: 1.2rem;
+            animation-name: divAnimation;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: ease-in-out;
+        }
+        h2 {
+            font-size: @font-subtitle;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 1.4375rem;
+        }
+        button {
+            font-size: @font-component;
+            padding: 18px 45px;
+            background: @color-button;
+            border: none;        
+            color: @color-font;
+        }
+    }
+    .deitaled-game {
+        flex-direction: column;
+        align-items: center;
+        .deitaled-components {
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 2vw;
+            .previous {
+                background-color: @color-component;
+            }
+            .next {
+                background-color: @color-font;
+                color: @color-component;
+            }
+            .previous, .next {
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+ 
