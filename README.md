@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-    <img src="img/xbox(1).png" width="200">
+    <img src="img/Xbox (1).png" width="200">
     <img src="img/Xbox-s.png" width="200">
 <br>
 </h1>
